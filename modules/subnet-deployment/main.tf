@@ -82,9 +82,9 @@ resource "azurerm_linux_virtual_machine" "example" {
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
-    version   = "latest"
+    publisher = var.hosts[each.key].publisher
+    offer     = var.hosts[each.key].offer
+    sku       = var.hosts[each.key].sku
+    version   = var.hosts[each.key].version
   }
 }

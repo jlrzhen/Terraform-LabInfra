@@ -65,7 +65,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine-${each.key}"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
-  size                = "Standard_F2"
+  size                = var.hosts[each.key].size
   admin_username      = "adminuser"
   network_interface_ids = [
     each.value.id,

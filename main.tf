@@ -35,9 +35,8 @@ module "subnet-deployment" {
   inbound_ports = ["22"]
   outbound_ports = ["0-65535"]
   hosts = {
-    "host1" = var.ubuntu,
-    "host2" = var.ubuntu,
-    "host3" = var.ubuntu,
-    "control" = var.ubuntu
+    "host1" = var.ubuntu_f2,
+    "host2" = var.ubuntu_f2,
+    "control" = var.ubuntu_av2
   }
 }

@@ -37,5 +37,7 @@ module "subnet-deployment" {
   hosts = {
     "host1" = var.ubuntu,
     "host2" = var.ubuntu
+    "host3" = var.ubuntu
+    "control" = var.ubuntu
   }
 }
